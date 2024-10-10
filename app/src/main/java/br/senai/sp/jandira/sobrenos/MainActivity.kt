@@ -48,7 +48,6 @@ fun Sobre() {
             .background(Color(0xFFD0E8FF))
             .padding(16.dp)
     ) {
-        // Top Section with Title and Back Arrow
         Row(
             modifier = Modifier
                 .fillMaxWidth(),
@@ -56,7 +55,7 @@ fun Sobre() {
             verticalAlignment = Alignment.CenterVertically
         ) {
             Image(
-                painter = painterResource(id = R.drawable.voltar), // Substituir com seu ícone
+                painter = painterResource(id = R.drawable.voltar),
                 contentDescription = "Back",
                 modifier = Modifier.size(24.dp)
             )
@@ -70,7 +69,6 @@ fun Sobre() {
         }
         Spacer(modifier = Modifier.height(24.dp))
 
-        // First Section with Person Image and Description
         Row(
             modifier = Modifier
                 .fillMaxWidth(),
@@ -91,7 +89,7 @@ fun Sobre() {
             }
             Spacer(modifier = Modifier.width(16.dp))
             Image(
-                painter = painterResource(id = R.drawable.ic_person), // Substituir com sua imagem
+                painter = painterResource(id = R.drawable.ic_person),
                 contentDescription = "Person",
                 modifier = Modifier
                     .size(80.dp)
@@ -101,14 +99,13 @@ fun Sobre() {
         }
         Spacer(modifier = Modifier.height(24.dp))
 
-        // Second Section with Cat Image and Description
         Row(
             modifier = Modifier
                 .fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Image(
-                painter = painterResource(id = R.drawable.ic_cat), // Substituir com sua imagem
+                painter = painterResource(id = R.drawable.ic_cat),
                 contentDescription = "Cat",
                 modifier = Modifier
                     .size(80.dp)
@@ -132,7 +129,6 @@ fun Sobre() {
         }
         Spacer(modifier = Modifier.height(24.dp))
 
-        // Donate Section
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -158,24 +154,22 @@ fun Sobre() {
                 }
             }
         }
-        Box(modifier = Modifier.fillMaxSize()){
+        Box(modifier = Modifier.fillMaxSize()) {
             Image(
                 painter = painterResource(id = R.drawable.logo),
                 contentDescription = "perfil",
                 modifier = Modifier
                     .size(width = 170.dp, height = 170.dp)
-                    .align(Alignment.BottomCenter))
+                    .align(Alignment.BottomCenter)
+            )
         }
-
-
     }
 }
-
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun GreetingPreview() {
     SobreNosTheme {
-       Sobre()
+        Sobre()
     }
 }
